@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Preview Design</title>
+    <style>
+        #main-image {
+            width: 320px;
+            height: 280px;
+            border: 2px solid black;
+            border-radius: 10px;
+            display: block;
+            margin: 10px auto;
+        }
+        .img{
+            height: 60px;
+            border: 1.5px solid black;
+            border-radius: 5px;
+            margin-left: 20px;
+            cursor: pointer;
+            width: 70px;
+        }
+        .img:hover{
+            box-shadow: 0px 0px 10px black;
+        }
+        .image-container {
+            display: block;
+            margin: 20px auto;
+            margin-left: 430px;
+        }
+        .name{
+            text-align: center;
+            font-size: 20px;
+            font-family: cursive;
+        }
+    </style>
+</head>
+
+<body>
+    <br><br><br>
+    <img src="./img/bag1.webp" id="main-image">
+    <div class="image-container">
+        <img src="./img/bag1.webp" class="img" onclick="change(1)">
+        <img src="./img/bag2.webp" class="img" onclick="change(2)">
+        <img src="./img/bag3.webp" class="img" onclick="change(3)">
+        <img src="./img/bag4.webp" class="img" onclick="change(4)">
+    </div>
+    <p class="name">TOTE BAG</p>
+    <script>
+        function change(num) {
+            const mainimage = document.getElementById('main-image');
+            if (num == 1) {
+                mainimage.src = "./img/bag1.webp";
+            } else if (num == 2) {
+                mainimage.src = "./img/bag2.webp";
+            } else if (num == 3) {
+                mainimage.src = "./img/bag3.webp";
+            } else if (num == 4) {
+                mainimage.src = "./img/bag4.webp";
+            }
+        }
+    </script>
+</body>
+</html>
